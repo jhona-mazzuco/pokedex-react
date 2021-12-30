@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PokedexCenter from "./components/PokedexCenter";
+import PokedexLeftPad from "./components/PokedexLeftPad";
+import PokedexRightPad from "./components/PokedexRightPad";
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Application, Pokedex } from './styles/global';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Application>
+      <Pokedex>
+        <PokedexLeftPad/>
+        <PokedexCenter/>
+        <PokedexRightPad/>
+      </Pokedex>
+    </Application>
   </React.StrictMode>,
   document.getElementById('root')
 );
